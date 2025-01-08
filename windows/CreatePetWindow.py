@@ -34,7 +34,7 @@ class CreatePetWindow(QMainWindow):
         self.current_owner_id = None
         self.current_owner_name = None
 
-    # Метод который вызывается при открытии окна и обновляет данные в таблице
+    # Метод, который вызывается при открытии окна и обновляет данные в таблице
     def showEvent(self, event):
         self.load_owners()
         super().showEvent(event)

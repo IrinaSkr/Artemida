@@ -619,7 +619,7 @@ class Ui_CreatePet(object):
 "}\n"
 "\n"
 "QComboBox::down-arrow {\n"
-"    image: url(C:/Users/irish/PycharmProjects/artemida/static/img/icon.png);\n"
+"    image: url(static/img/icon.png);\n"
 "    width: 20px;\n"
 "    height: 20px;\n"
 "margin-right: 16px;\n"
