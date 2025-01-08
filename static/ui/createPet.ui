@@ -1056,9 +1056,9 @@ padding: 6px 16px;
      <widget class="QPushButton" name="pushButton_8">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>475</x>
         <y>53</y>
-        <width>232</width>
+        <width>121</width>
         <height>40</height>
        </rect>
       </property>
@@ -1081,7 +1081,7 @@ border: 1px solid #174EB9;
 border-radius: 6px;</string>
       </property>
       <property name="text">
-       <string>Добавить владельца</string>
+       <string>Добавить</string>
       </property>
       <property name="default">
        <bool>false</bool>
@@ -1142,6 +1142,65 @@ padding: 6px 16px;
       <property name="placeholderText">
        <string>Опишите особенности</string>
       </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>53</y>
+        <width>271</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Onest</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+padding: 6px 16px;
+color: #242424;
+border: 1px solid #174EB9;
+border-radius: 6px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox::down-arrow {
+	image: url(C:/Users/irish/Downloads/icon.png);
+    width: 20px;
+    height: 20px;
+margin-right: 16px;
+}
+
+QComboBox::item:hover {
+    background-color: #174EB9;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Владелец</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Владелец</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Владелец</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Владелец</string>
+       </property>
+      </item>
      </widget>
     </widget>
    </widget>

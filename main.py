@@ -1,34 +1,49 @@
 import sys
-from dataBase import load_data_to_table
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5 import QtWidgets, uic
+from PyQt5.QtWidgets import QApplication, QMainWindow, QStackedWidget
 
-from ui import Ui_MainWindow, Ui_cardList
+from windows.CardListWindow import CardListWindow
+from windows.MainWindow import MainWindow
+from windows.CreatePetWindow import CreatePetWindow
+from windows.CreateOwnerWindow import CreateOwnerWindow
+from windows.EditOwnerWindow import EditOwnerWindow
+from windows.PetCardWindow import PetCardWindow
+from windows.EditPetWindow import EditPetWindow
 
 
-class MainWindow(QMainWindow):
+class Main(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.mainWind = self
-        self.ChangeUI(Ui_MainWindow())
-        self.popup = None
-        self.ui.pushButton_3.clicked.connect(self.close_application)
+        self.setFixedSize(1440, 864)
+        self.setWindowTitle("Артемида")
 
-        self.ui.pushButton_2.clicked.connect(self.load_data)
+        # Создаем стек виджетов, куда поместим все окна для удобного переключения
+        self.stacked_widget = QStackedWidget(self)
+        self.setCentralWidget(self.stacked_widget)
 
-    def ChangeUI(self, UI):
-        self.ui = UI
-        self.ui.setupUi(self)
+        # Создаем окна
+        self.main_menu = MainWindow(self)
+        self.card_list_menu = CardListWindow(self)
+        self.create_pet = CreatePetWindow(self)
+        self.create_owner = CreateOwnerWindow(self)
+        self.edit_owner = EditOwnerWindow(self)
+        self.pet_card = PetCardWindow(self)
+        self.edit_pet = EditPetWindow(self)
 
-    def close_application(self):
-        self.close()
+        # Добавляем окна в стек
+        self.stacked_widget.addWidget(self.main_menu)
+        self.stacked_widget.addWidget(self.card_list_menu)
+        self.stacked_widget.addWidget(self.create_pet)
+        self.stacked_widget.addWidget(self.create_owner)
+        self.stacked_widget.addWidget(self.edit_owner)
+        self.stacked_widget.addWidget(self.pet_card)
+        self.stacked_widget.addWidget(self.edit_pet)
 
-    def load_data(self):
-        load_data_to_table(self.ui.tableWidget)
+        # Включаем главное окно
+        self.stacked_widget.setCurrentWidget(self.main_menu)
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = MainWindow()
+    ex = Main()
     ex.show()
     sys.exit(app.exec())
