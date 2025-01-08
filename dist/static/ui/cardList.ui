@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cardList</class>
+ <widget class="QMainWindow" name="cardList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>935</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FEFEFE;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="header">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1440</width>
+      <height>89</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    border: none; 
+}
+
+QFrame#header {
+    border-bottom: 1px solid #DEDEDE;
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QWidget" name="logo" native="true">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>21</y>
+       <width>244</width>
+       <height>48</height>
+      </rect>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>3</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Acrom</family>
+        <pointsize>26</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Артемида</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>4</x>
+        <y>2</y>
+        <width>40</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>Иконка2.png</pixmap>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>62</x>
+       <y>15</y>
+       <width>168</width>
+       <height>57</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Onest</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">padding: 16px 24px;
+color: #242424;
+border: 2px solid #DEDEDE;
+border-radius: 16px;</string>
+     </property>
+     <property name="text">
+      <string>Назад в меню</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>15</y>
+       <width>211</width>
+       <height>57</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Onest</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+       <underline>false</underline>
+       <strikeout>false</strikeout>
+       <stylestrategy>PreferDefault</stylestrategy>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">padding: 16px 24px;
+color: #242424;
+border: 2px solid #DEDEDE;
+border-radius: 16px;</string>
+     </property>
+     <property name="text">
+      <string>Закрыть программу</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>62</x>
+      <y>122</y>
+      <width>272</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Onest Medium</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 12px 24px;
+color: white;
+border: none;
+border-radius: 16px;
+background-color: #174EB9;</string>
+    </property>
+    <property name="text">
+     <string>Создать новую карту</string>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>300</number>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>62</x>
+      <y>214</y>
+      <width>1095</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1095</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Onest Medium</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+background-color: #EDEDED; 
+border: 1px solid #EDEDED;
+alternate-background-color: #F3F3F3;
+color: #242424;
+}
+
+QHeaderView {
+background-color: #EDEDED;
+}</string>
+    </property>
+    <property name="showGrid">
+     <bool>true</bool>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>№ карточки</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Onest Medium</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="background">
+      <color>
+       <red>237</red>
+       <green>237</green>
+       <blue>237</blue>
+      </color>
+     </property>
+     <property name="foreground">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>36</red>
+        <green>36</green>
+        <blue>36</blue>
+       </color>
+      </brush>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Пациент</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Onest Medium</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="background">
+      <color>
+       <red>237</red>
+       <green>237</green>
+       <blue>237</blue>
+      </color>
+     </property>
+     <property name="foreground">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>36</red>
+        <green>36</green>
+        <blue>36</blue>
+       </color>
+      </brush>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ФИО владельца</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Onest Medium</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="background">
+      <color>
+       <red>237</red>
+       <green>237</green>
+       <blue>237</blue>
+      </color>
+     </property>
+     <property name="foreground">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>36</red>
+        <green>36</green>
+        <blue>36</blue>
+       </color>
+      </brush>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ID владельца</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Onest Medium</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="background">
+      <color>
+       <red>237</red>
+       <green>237</green>
+       <blue>237</blue>
+      </color>
+     </property>
+     <property name="foreground">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>36</red>
+        <green>36</green>
+        <blue>36</blue>
+       </color>
+      </brush>
+     </property>
+    </column>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>120</y>
+      <width>222</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Onest Medium</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 12px 24px;
+color: #242424;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>Удалить запись</string>
+    </property>
+    <property name="autoRepeatDelay">
+     <number>300</number>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
